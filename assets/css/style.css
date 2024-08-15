@@ -1,0 +1,219 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(pink,rgb(71, 1, 71));
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.container {
+    width: 60%;
+    height: 87vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 3rem;
+    position: relative;
+}
+
+.form input {
+    display: block;
+    height: 45px;
+}
+
+.form-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-header h1::after{
+    content: '';
+    display: block;
+    width: 25rem;
+    height: 0.3rem;
+    background-color: deeppink;
+    margin: 5px auto;
+    position: absolute;
+    /* border-radius: 3px; */
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    min-width: 350px;
+}
+
+.input-box #title {
+    width: 100%;
+    max-width: 2365px;
+    align-items: center;
+}
+
+.input-box #desc {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    margin-bottom: 5px;
+    min-height: 45px;
+    height: 45px;
+    max-height: 90px;
+    max-width: 350px;
+}
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    margin-bottom: 5px;
+}
+
+.input-box input:hover {
+    background-color: #eeeeee75;
+}
+
+.input-box textarea:hover {
+    background-color: #eeeeee75;
+    outline: 1px solid #000000c0;
+}
+
+#area-selection:hover, #colab-selection:hover {
+    background-color: #eeeeee75;
+    outline: 1px solid #000000c0;
+}
+
+.input-box input:focus-visible, .input-box textarea:focus-visible {
+    outline: 1px solid deeppink;
+}
+
+.input-box label, 
+.area-title h6, .colab-title h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-box input::placeholder, .input-box textarea::placeholder {
+    color: #000000be;
+}
+
+.area-group, .colab-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 0.5rem;
+}
+
+.area label, .colab label {
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+#area-selection, #colab-selection {
+    width: 350px;
+    height: 45px;
+    margin-left: -8px;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 15px;
+}
+
+.colab-inputs {
+    margin-right: -8px;
+}
+
+.continue-button {
+    /* margin-top: auto;
+    position: fixed;
+    top: 80vh;
+    min-width: 53%;
+    max-width: 53%;
+    justify-content: center;
+    align-items: center; */
+}
+
+.continue-button button {
+
+    margin-right: 726px;
+    border: none;
+    background-color: deeppink;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button button:hover {
+    background-color: pink;
+}
+
+.continue-button button a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: pink;
+}
+
+.input-box a, .area-inputs a, .colab-inputs a {
+    position: relative;
+    bottom: -8px;
+    left: 0;
+    visibility: hidden;
+}
+
+.form button {
+    position: relative;
+    background-color: deeppink;
+    color: #ffffff;
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 14px;
+}
+
+.input-box.error input, .input-box.error textarea, .area-inputs.error input, .colab-inputs.error input {
+    border-color: #ff3b25;
+}
+
+.input-box.error textarea, .area-inputs.error input, .colab-inputs.error input {
+    border-color: #ff3b25;
+    outline: 1px solid #ff3b25;
+}
+
+.input-box.error a, .area-inputs.error a, .colab-inputs.error a {
+    color: #ff3b25;
+    visibility: visible;
+    font-size: 10px;
+    padding-bottom: 20px;
+    margin-top: -10px;
+}

@@ -1,0 +1,332 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: linear-gradient(pink, rgb(71, 1, 71));
+    padding: 20px;
+    overflow: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+.pagina {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pagina-header {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.pagina-header h1::after {
+    content: '';
+    display: block;
+    width: 25rem;
+    height: 0.3rem;
+    background-color: deeppink;
+    margin: 5px auto;
+    position: absolute;
+}
+
+.pagina h3 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: deeppink;
+}
+
+.pagina h3.descricao,
+.pagina h3.contato {
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.pagina a {
+    text-decoration: none; 
+    color: #ffffff; 
+}
+
+.pagina p {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.image-section {
+    margin-bottom: 20px;
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.pagina input,
+.pagina textarea {
+    display: block;
+    width: 100%;
+    height: 45px;
+    padding: 0.8rem 1.2rem;
+    margin: 0.6rem 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.pagina input:hover,
+.pagina textarea:hover {
+    background-color: #eeeeee75;
+    outline: 1px solid #000000c0;
+}
+
+.pagina input:focus-visible,
+.pagina textarea:focus-visible {
+    outline: 1px solid deeppink;
+}
+
+.pagina label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.pagina input::placeholder,
+.pagina textarea::placeholder {
+    color: #000000be;
+}
+
+.pagina button {
+    background-color: deeppink;
+    color: #ffffff;
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 14px;
+    border-radius: 5px;
+}
+
+.pagina button:hover {
+    background-color: pink;
+}
+
+.contact-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.contact-buttons button {
+    background-color: #f06292;
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.contact-buttons button:hover {
+    background-color: #e91e63;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-details h4 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: deeppink;
+}
+
+.chat-button {
+    background-color: #f06292;
+    color: #ffffff;
+    border: none;
+    max-width: 60px;
+    padding: 8px 10px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.chat-button:hover {
+    background-color: #e91e63;
+}
+
+.pagina .error {
+    border-color: #ff3b25;
+    outline: 1px solid #ff3b25;
+}
+
+.pagina .error a {
+    color: #ff3b25;
+    visibility: visible;
+    font-size: 10px;
+    padding-bottom: 20px;
+    margin-top: -10px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: pink;
+}
+
+@media screen and (max-width: 1330px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1072px) {
+    .pagina {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 665px) {
+    .pagina {
+        padding: 10px;
+    }
+}
+
+.divider {
+    border: 0;
+    height: 1.5px;
+    background-color: #d3d3d3;
+    margin: 20px 0;
+}
+
+.collaboration-feedback {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.collaboration-feedback h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: deeppink;
+}
+
+.feedback-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.feedback-button {
+    background-color: #f06292;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.feedback-button:hover {
+    background-color: #e91e63;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.feedback-submit {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.feedback-submit button {
+    background-color: deeppink;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.feedback-submit button:hover {
+    background-color: pink;
+}
+
+.rating {
+    text-align: center;
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating {
+    display: inline-block;
+    direction: rtl;
+    font-size: 2rem;
+}
+
+.rating label {
+    font-size: 1.5rem;
+    color: #d3d3d3;
+    cursor: pointer;
+}
+
+.rating input[type="radio"]:checked ~ label {
+    color: gold;
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+    color: gold;
+}

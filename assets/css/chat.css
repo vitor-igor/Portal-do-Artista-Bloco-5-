@@ -1,0 +1,247 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(pink, rgb(71, 1, 71));
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.container {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+    background-color: #ffffff;
+    display: block;
+}
+
+.pesquisa {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+}
+
+.seila {
+    width: 99.3%;
+    height: 90%;
+    margin: 10px 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.users {
+    width: 29%;
+    border: 2px solid black;
+    float: left;
+    margin: 5px;
+    max-height: 60vh;
+    height: 60vh;
+}
+
+.messages {
+    width: 69%;
+    max-width: 69%;
+    border: 2px solid black;
+    float: left;
+    margin: 5px;
+    max-height: 60vh;
+    height: 60vh;
+    overflow: auto;
+}
+
+.search__form {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    width: 100%;
+    margin-left: -5px;
+    position: relative;
+}
+
+.search__input {
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    flex-grow: 1;
+    background-color: #d1cbcb;
+    outline: none;
+    color: #f2f2f2;
+    font-size: 1rem;
+}
+
+.search__button {
+    border: none;
+    background: none;
+    color: #f2f2f2;
+    cursor: pointer;
+}
+
+.search__button > span {
+    font-size: 1.8rem;
+    color: black;
+}
+
+.luanna {
+    /* position: relative;
+    display: flex; */
+    max-width: 69%;
+}
+
+.chat__messages {
+    flex-grow: 1;
+    padding: 30px 30px 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 50px;
+}
+
+.chat__form {
+    background-color: #eae7e7;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    bottom: 89px;
+    width: 109.2vh;
+    min-width: 54.7%;
+    max-width: 69%;
+    margin-left: -1px;
+    border: 2px solid black;
+}
+
+.chat__input {
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    flex-grow: 1;
+    background-color: #d1cbcb;
+    outline: none;
+    color: #f2f2f2;
+    font-size: 1rem;
+    height: 10px;
+}
+
+.chat__button {
+    border: none;
+    background: none;
+    color: #f2f2f2;
+    cursor: pointer;
+}
+
+.chat__button > span {
+    font-size: 1.8rem;
+    color: black;
+}
+
+.chat__users {
+    display: flex;
+}
+
+.title {
+    /* background-color: pink; */
+    font-size: 25px;
+    color: #333;
+    display: flex;
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.message--self {
+    background-color: #f2f2f2;
+    color: #121212;
+    border-radius: 10px 10px 0 10px;
+    align-self: flex-end;
+    min-width: 200px;
+    max-width: 550px;
+    min-height: 30px;
+    max-height: 100px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.message--self span {
+    margin-bottom: 5px;
+    margin-left: 7px;
+}
+
+.message--other {
+    background-color: #333;
+    color: #f2f2f2;
+    border-radius: 0 10px 10px 10px;
+    align-self: flex-start;
+    min-width: 200px;
+    max-width: 550px;
+    min-height: 30px;
+    max-height: 100px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.message--other span {
+    margin-top: 5px;
+    margin-left: 7px;
+    margin-bottom: 0px;
+}
+
+.message--sender {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: darkmagenta;
+    width: 200px;
+}
+
+.usuario {
+    position: fixed;
+    background-color: #333;
+    min-width: 54.7%;
+}
+
+.usu {
+    position: relative;
+    margin: 5px 10px;
+}
+
+.perfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: left;
+    margin-bottom: 5px;
+}
+
+.name {
+    float: left;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: darkmagenta;
+}
+
+.use {
+    display: flex;
+    padding: 7px;
+}

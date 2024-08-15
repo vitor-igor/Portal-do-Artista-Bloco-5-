@@ -1,0 +1,34 @@
+body {
+    background-image: linear-gradient(pink, rgb(71, 1, 71));
+}
+
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.carousel-control-prev {
+    left: -50px;
+}
+
+.carousel-control-next {
+    right: -50px;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+}
+
+.caption-box {
+    padding: 10px;
+    border-radius: 5px;
+}
+img{
+    border-color:gray;
+    border: 50px;
+}
