@@ -23,6 +23,7 @@ body {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
     background-color: #ffffff;
     display: block;
+    position: fixed;
 }
 
 .pesquisa {
@@ -182,7 +183,7 @@ body {
     margin-top: 5px;
 }
 
-.message--self span {
+.message--self p {
     margin-bottom: 5px;
     margin-left: 7px;
 }
@@ -200,7 +201,7 @@ body {
     margin-top: 5px;
 }
 
-.message--other span {
+.message--other p {
     margin-top: 5px;
     margin-left: 7px;
     margin-bottom: 0px;

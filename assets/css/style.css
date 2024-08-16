@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-    width: 60%;
+    width: 65%;
     height: 87vh;
     display: flex;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
@@ -145,22 +145,16 @@ body {
 }
 
 .continue-button {
-    /* margin-top: auto;
-    position: fixed;
-    top: 80vh;
-    min-width: 53%;
-    max-width: 53%;
-    justify-content: center;
-    align-items: center; */
+    width: 100%;
 }
 
 .continue-button button {
-
     margin-right: 726px;
     border: none;
     background-color: deeppink;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%;
 }
 
 .continue-button button:hover {
