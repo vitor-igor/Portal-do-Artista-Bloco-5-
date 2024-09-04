@@ -55,6 +55,7 @@ img{
     height: 400px;
     max-width: 1500px;
     width: 1200px;
+    border-radius: 3px;
 }
 
 .mapa {
@@ -69,6 +70,7 @@ img{
     margin-left: -12px;
     margin-bottom: 10px;
     background-color: white;
+    border-radius:3px;
 }
 
 .eventos {
@@ -92,6 +94,7 @@ img{
     font-size: 25px;
     text-align: center;
     justify-content: center;
+    
 }
 
 .form-header h1::after{
@@ -112,4 +115,13 @@ img{
 
 article .form-header h1::after{
     width: 400px;
+}
+
+.t-ind{
+    text-shadow: 1.5px 1.5px 1.5px black;
+    color: #FFFFFF;
+}
+
+.hdt:hover{
+    padding: 2px;
 }

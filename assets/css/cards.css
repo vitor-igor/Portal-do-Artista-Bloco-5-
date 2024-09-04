@@ -111,6 +111,12 @@ body > div > img {
 	margin-bottom: 15px;
 }
 
+.card-text-2 {
+	font-size: 1em;
+	color: #666;
+	margin-bottom: 21px;
+}
+
 .btn-primary {
 	background-color: #007bff;
 	border: none;
@@ -124,4 +130,21 @@ body > div > img {
 .btn-primary:hover {
 	background-color: #0056b3;
 	color: white;
+}
+
+.btn-ultra-voilet {
+	font-family: Arial, Helvetica, sans-serif;
+    background: rgb(167, 3, 167);
+    color: rgb(255, 255, 255);
+    padding: 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px black;
+    box-shadow: 1px 1px 1px black;
+}
+  
+.btn-ultra-voilet:hover{
+	background: rgb(83, 1, 83) ;
+	padding: 7px;
 }
