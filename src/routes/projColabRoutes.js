@@ -34,6 +34,11 @@ export default function projColabRoutes(app, upload) {
         return res.status(404).json({ error: "Usuário não encontrado para o e-mail fornecido." });
       }
 
+      // Verificar se o usuário está ativo
+      if (!user.ativo) {
+        return res.status(403).json({ error: "Usuário inativo. Não é permitido criar projetos colaborativos." });
+      }
+
       // Criar o projeto colaborativo com o ID do usuário (author_id)
       const projColab = await prisma.projColab.create({
         data: {
@@ -82,7 +87,35 @@ export default function projColabRoutes(app, upload) {
       res.status(500).json({ error: 'Erro ao buscar projeto colaborativo.' });
     }
   });
+
+  // Nova rota DELETE para deletar um projeto colaborativo pelo ID
+  app.delete('/post/:id', async (req, res) => {
+    try {
+      const projectId = parseInt(req.params.id);
+
+      // Verificar se o projeto existe
+      const project = await prisma.projColab.findUnique({
+        where: { id: projectId }
+      });
+
+      if (!project) {
+        return res.status(404).json({ error: 'Projeto não encontrado.' });
+      }
+
+      // Deletar o projeto
+      await prisma.projColab.delete({
+        where: { id: projectId }
+      });
+
+      res.status(200).json({ message: 'Projeto deletado com sucesso.' });
+    } catch (error) {
+      console.error('Erro ao deletar projeto colaborativo:', error);
+      res.status(500).json({ error: 'Erro ao deletar projeto colaborativo.' });
+    }
+  });
 }
+
+
 
   
   
