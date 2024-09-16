@@ -1,0 +1,126 @@
+body {
+    background-image: linear-gradient(pink, rgb(71, 1, 71));
+}
+
+#sug-bar {
+    height: 50px;
+    width: 100%;
+}
+
+img{
+    border-color:gray;
+    border: 50px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: pink;
+}
+
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 60px;
+    background-color: white;
+    height: 400px;
+    max-width: 1500px;
+    width: 1200px;
+    border-radius: 3px;
+}
+
+.mapa {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    margin-left: -12px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius:3px;
+}
+
+.eventos {
+    background-color: white;
+    height: 400px;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    margin-left: 10px;
+    width: 100%;
+}
+
+.eventos p {
+    margin-top: 55px;
+}
+
+.form-header {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Inter", sans-serif;
+    font-size: 25px;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.form-header h1::after{
+    content: '';
+    display: block;
+    width: 25rem;
+    height: 0.3rem;
+    background-color: deeppink;
+    margin: 5px auto;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+}
+
+.form-header h1::after{
+    width: 312px;
+}
+
+article .form-header h1::after{
+    width: 400px;
+}
+
+.t-ind{
+    text-shadow: 1.5px 1.5px 1.5px black;
+    color: #FFFFFF;
+}
+
+.hdt:hover{
+    padding: 2px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+#searchBar {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 1200px;
+}
+
+#filterCategory {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

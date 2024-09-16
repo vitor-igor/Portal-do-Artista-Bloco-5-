@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Usuario {
+  id Int @id @default(autoincrement())
+  email String @unique
+  password String
+  name String
+  type String @default("PUBLICO_GERAL")
+  ativo Boolean @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt 
+
+  ProjColab ProjColab []
+}
+
+model ProjColab {
+  id Int @id @default(autoincrement())
+  descricao String
+  title String 
+  area String
+  loc String?
+  type String
+  author_id Int
+  image_url  String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt 
+
+  author Usuario @relation(fields:[author_id], references: [id])
+}

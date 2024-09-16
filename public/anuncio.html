@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="./assets/img/icon.svg"> 
+    <link rel="stylesheet" href="./assets/css/anuncio.css">
+  
+    <title>Portal dos Artistas | Projeto</title>
+</head>
+<body>
+    <div class="container">
+        <div id="pagina" class="pagina">
+            <!-- O conteúdo do projeto será gerado dinamicamente aqui -->
+        </div>
+    </div>
+
+    <script>
+        // Função para obter os parâmetros da URL
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Carregar conteúdo do projeto colaborativo
+        async function loadProject() {
+            const projectId = getQueryParam('id'); // Pegar o ID do projeto da URL
+            if (!projectId) {
+                document.getElementById('pagina').innerHTML = '<p>Projeto não encontrado.</p>';
+                return;
+            }
+
+            try {
+                // Buscar dados do projeto
+                const response = await fetch(`/post/${projectId}`);
+                if (!response.ok) {
+                    throw new Error('Projeto não encontrado');
+                }
+
+                const project = await response.json(); // Obter os dados do projeto
+
+                // Verifica se o project.image_url é válido; caso contrário, usa a imagem padrão
+                const imageUrl = project.image_url && project.image_url.trim() !== '' ? project.image_url : './assets/img/default-image.jpg';
+
+                // Montar o conteúdo da página dinamicamente com base nos dados
+                document.getElementById('pagina').innerHTML = `
+                    <div class="pagina-header">
+                        <div class="title">
+                            <h1>${project.title}</h1>
+                        </div>
+                    </div>
+
+                    <div class="image-section">
+                        <img src="${imageUrl}" alt="Imagem do Projeto" class="project-image">
+                    </div>
+
+                    <h3>Descrição do Projeto</h3>
+                    <p>${project.descricao}</p>
+
+                    <h4>Área de Atuação:</h4>
+                    <p>${project.area}</p>
+
+                    <h3>Contato</h3>
+                    <div class="contact-info">
+                        <img src="./assets/img/perfil0.jpg" alt="Responsável" class="contact-image">
+                        <div class="contact-details">
+                            <h3 class="contato">${project.author.name}</h3>
+                            <p>Responsável</p>
+                            <button class="chat-button"> <a href="./chat.html">Chat </a></button>
+                        </div>
+                    </div>
+
+                    <div class="contact-buttons">
+                        <button>${project.author.email}</button>
+                        <button>📍 ${project.loc}</button>
+                    </div>
+
+                    <hr class="divider">
+                    <div class="collaboration-feedback">
+                        <h4>Colaboração encerrada?</h4>
+                        <div class="feedback-buttons">
+                            <button class="feedback-button">Sim</button>
+                            <button class="feedback-button">Não</button>
+                        </div>
+                        <div class="rating">
+                            <label for="rating">Avaliação</label>
+                            <div class="stars">
+                                <input type="radio" name="rating" id="star5" value="5"><label for="star5">★</label>
+                                <input type="radio" name="rating" id="star4" value="4"><label for="star4">★</label>
+                                <input type="radio" name="rating" id="star3" value="3"><label for="star3">★</label>
+                                <input type="radio" name="rating" id="star2" value="2"><label for="star2">★</label>
+                                <input type="radio" name="rating" id="star1" value="1"><label for="star1">★</label>
+                            </div>
+                        </div>
+                        <textarea placeholder="Avalie a colaboração"></textarea>
+                        <div class="feedback-submit">
+                            <button>Enviar</button>
+                        </div>
+                    </div>
+                `;
+            } catch (error) {
+                console.error('Erro ao carregar o projeto:', error);
+                document.getElementById('pagina').innerHTML = '<p>Projeto não encontrado.</p>';
+            }
+        }
+
+        // Carregar o conteúdo quando a página estiver pronta
+        document.addEventListener('DOMContentLoaded', loadProject);
+    </script>
+</body>
+</html>

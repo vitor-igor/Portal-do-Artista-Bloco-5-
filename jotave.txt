@@ -1,0 +1,20 @@
+const eventos = fetch
+
+for::: const evento of eventos
+    evento
+
+const lista = document.getElementById
+
+const item = `
+<div class="image-section">
+                <img src="./assets/img/header.avif" alt="Imagem do Projeto" class="project-image">
+            </div>
+            <h3>${ewqeq}</h3>
+            <p>
+               ${}
+            </p>
+            <br>
+            <h4>Área de Atuação: ${}</h4>
+            <p>Dança, Teatro</p>
+            <h3>Contato</h3>
+`

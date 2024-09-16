@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="./assets/img/icon.svg"> 
+    <link rel="stylesheet" href="assets/css/style.css">
+  
+    <title>Portal de Artistas | Anúncio de Projetos</title>
+</head>
+<body>
+    <div class="container">
+        <div id="form" class="form">
+            <form id="projForm" enctype="multipart/form-data">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Anúncio de Projetos</h1>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="title">Título do Projeto</label>
+                    <input id="title" type="text" name="titulo" placeholder="Digite o título:" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="email">E-mail</label>
+                    <input id="email" type="email" name="email" placeholder="Digite seu email:" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="photo">Escolha uma foto:</label>
+                    <input type="file" id="photo" name="photo" accept="image/*" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="desc">Descrição</label>
+                    <textarea id="desc" name="descricao" placeholder="Descreva o projeto:" rows="6" required></textarea>
+                </div>
+
+                <div class="input-box">
+                    <label for="loc">Localização</label>
+                    <input id="loc" type="text" name="localizacao" placeholder="Ex.: João Pessoa, PB" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="area">Área de Atuação</label>
+                    <input id="area-selection" name="area" placeholder="Dança, Teatro, Música, Pintura, Canto..." required>
+                </div>
+
+                <div class="colab-inputs">
+                    <div class="colab-title">
+                        <h6>Colaboração Procurada</h6>
+                    </div>
+                    <label class="colab-group">
+                        <select id="colab-selection" name="colaboracao" required>
+                            <option selected disabled value="">Selecione:</option>
+                            <option>Dupla</option>
+                            <option>Participação especial</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="continue-button">
+                    <button type="submit"><h3>Postar</h3></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('projForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(document.getElementById('projForm'));
+
+            try {
+                const response = await fetch('/create-proj-colab', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    alert('Projeto enviado com sucesso!');
+                    document.getElementById('projForm').reset();
+                } else {
+                    alert('Erro ao enviar projeto');
+                }
+            } catch (error) {
+                console.error('Erro ao enviar projeto:', error);
+                alert('Erro ao enviar projeto');
+            }
+        });
+    </script>
+</body>
+</html>

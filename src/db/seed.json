@@ -1,0 +1,112 @@
+{
+    "usuarios": [
+      {
+        "name": "João Victor",
+        "email": "joaovictorgouveiar@gmail.com",
+        "password": "password123",
+        "type": "ARTISTA",
+        "ativo": true
+      },
+      {
+        "name": "Luanna",
+        "email": "blurry_luh@gmail.com",
+        "password": "slipmami"
+      },
+      {
+        "name": "Allice",
+        "email": "allice@gmail.com",
+        "password": "password123",
+        "type": "GESTOR_CULTURAL",
+        "ativo": true
+      },
+      {
+        "name": "Fabrizia",
+        "email": "fafa@gmail.com",
+        "password": "123456",
+        "type": "PUBLICO_GERAL",
+        "ativo": false
+      },
+      {
+        "name": "Anitta",
+        "email": "larissinha@gmail.com",
+        "password": "funk_generation",
+        "type": "ARTISTA",
+        "ativo": true
+      },
+      {
+        "name": "Taylor Silva",
+        "email": "silvat@gmail.com",
+        "password": "billboard",
+        "type": "ARTISTA",
+        "ativo": true
+      }
+    ],
+    "projs": [
+      {
+        "title": "Buscando por feat!",
+        "descricao": "Estou muito flopada esses últimos dias e tem uma tal de Billie Eilish roubando meu topo da Billboard, então quero um feat para roubar o hype de alguém. Vai ser a décima quarta versão de 'Fortnite', em que você, meu featuring escolhido, irá cantar apenas o backing vocal! Oportunidade imperdível!!!",
+        "area": "Dança, Teatro",
+        "loc": "João Pessoa, PB",
+        "type": "Dupla",
+        "author_id": 6,
+        "image_url": "./assets/img/header.avif"
+      },
+      {
+        "title": "Procura por equipe para peça infantil.",
+        "descricao": "Desejo proporcionar um momento de lazer para as crianças durante o mês de Outubro, então procuro profissionais para uma exibição teatral nos sábados.",
+        "area": "Teatro",
+        "loc": "Recife, PE",
+        "type": "Participação especial",
+        "author_id": 3,
+        "image_url": "https://img.freepik.com/fotos-gratis/beleza-abstrata-de-outono-em-padrao-multicolorido-de-veios-de-folhas-gerado-por-ia_188544-9871.jpg?size=626&ext=jpg&ga=GA1.1.1819120589.1726185600&semt=ais_hybrid"
+      },
+      {
+        "title": "Parceiro para iniciar na carreira musical",
+        "descricao": "Sou apaixonada por música e desejo ingressar nesse ramo, estou em busca de uma dupla que compartilhe da mesma paixão.",
+        "area": "Música",
+        "loc": "João Pessoa, PB",
+        "type": "Dupla",
+        "author_id": 5
+      },
+      {
+        "title": "Releitura de obras",
+        "descricao": "Estou a procura de uma pessoa para participar do meu projeto de releitura de 20 obras famosas, para exposição no final de novembro.",
+        "area": "Pintura",
+        "loc": "Macapá, AP",
+        "type": "Dupla",
+        "author_id": 1
+      },
+      {
+        "title": "Teste",
+        "descricao": "Teste",
+        "area": "Performance, Dança",
+        "loc": "Fortaleza, CE",
+        "type": "Participação especial",
+        "author_id": 3
+      },
+      {
+        "title": "Teste",
+        "descricao": "Teste",
+        "area": "Performance",
+        "loc": "Natal, RN",
+        "type": "Participação especial",
+        "author_id": 6
+      },
+      {
+        "title": "Homenagem para Michael Jackson",
+        "descricao": "Vou homenagear meu artista favorito e estou procurando uma pessoa com habiliades de canto, para no dia 25 de junho fazer uma participação no meu show com as músicas de Micheal Jackson.",
+        "area": "Canto",
+        "loc": "Salvador, BA",
+        "type": "Participação especial",
+        "author_id": 6
+      },
+      {
+        "title": "Teste",
+        "descricao": "Teste",
+        "area": "Canto, Dança",
+        "loc": "Natal, RN",
+        "type": "Participação especial",
+        "author_id": 1
+      }
+    ]
+  }
