@@ -2,19 +2,7 @@ import express from 'express'
 import { PrismaClient } from '@prisma/client'
 
 const router = express.Router()
-const prisma = new PrismaClient()
-
-// //todos os blogs
-// app.get('/posts', async (req, res) => {
-//   try {
-//       const posts = await prisma.projColab.findMany({
-//           include: { author: true }
-//       });
-//       res.json(posts);
-//   } catch (error) {
-//       res.status(500).json({ error: 'Internal Server Error' });
-//   }
-// });
+const prisma = new PrismaClient();
 
 export default function projColabRoutes(app, upload) {
   
@@ -88,7 +76,7 @@ export default function projColabRoutes(app, upload) {
     }
   });
 
-  // Nova rota DELETE para deletar um projeto colaborativo pelo ID
+  // Rota para deletar um projeto colaborativo pelo ID
   app.delete('/post/:id', async (req, res) => {
     try {
       const projectId = parseInt(req.params.id);
@@ -114,10 +102,3 @@ export default function projColabRoutes(app, upload) {
     }
   });
 }
-
-
-
-  
-  
-  
-// Outras rotas para Projetos Colaborativos (listar, editar, deletar, etc.)
