@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('/posts')
         .then(response => response.json())
         .then(data => {
-            renderPosts(data);  // Render initial posts
+            renderPosts(data);  
 
             // Event listener for the search bar
             searchBar.addEventListener('keyup', () => {
