@@ -5,7 +5,8 @@
         "email": "joaovictorgouveiar@gmail.com",
         "password": "password123",
         "type": "ARTISTA",
-        "ativo": true
+        "ativo": true,
+        "area": "Pintura, Canto, Dança"
       },
       {
         "name": "Luanna",
@@ -31,14 +32,50 @@
         "email": "larissinha@gmail.com",
         "password": "funk_generation",
         "type": "ARTISTA",
-        "ativo": true
+        "ativo": true,
+        "area": "Canto, Performance"
       },
       {
         "name": "Taylor Silva",
         "email": "silvat@gmail.com",
         "password": "billboard",
         "type": "ARTISTA",
-        "ativo": true
+        "ativo": true,
+        "area": "Canto, Performance",
+        "image_url": "./assets/img/perfil0.jpg"
+      },
+      {
+        "name": "Vitor",
+        "email": "vitor@gmail.com",
+        "password": "blahblahgiovanninãoécoordenadordeverdadeblahblah",
+        "type": "PUBLICO_GERAL",
+        "ativo": true,
+        "image_url": "./assets/img/perfil.jpg"
+      },
+      {
+        "name": "The Doctor",
+        "email": "tardis@gmail.com",
+        "password": "screwdriver",
+        "type": "ARTISTA",
+        "ativo": true,
+        "image_url": "./assets/img/perfil1.jpg"
+      },
+      {
+        "name": "Mamãe Garnet",
+        "email": "rubi&safira@gmail.com",
+        "password": "love",
+        "type": "PUBLICO_GERAL",
+        "ativo": true,
+        "image_url": "./assets/img/perfil2.jpg"
+      },
+      {
+        "name": "Ariana Grande",
+        "email": "positions@gmail.com",
+        "password": "eternalsunshine",
+        "type": "ARTISTA",
+        "ativo": true,
+        "area": "Canto, Performance, Música, Teatro",
+        "image_url": "./assets/img/perfil3.jpeg"
       }
     ],
     "projs": [
@@ -46,7 +83,7 @@
         "title": "Buscando por feat!",
         "descricao": "Estou muito flopada esses últimos dias e tem uma tal de Billie Eilish roubando meu topo da Billboard, então quero um feat para roubar o hype de alguém. Vai ser a décima quarta versão de 'Fortnite', em que você, meu featuring escolhido, irá cantar apenas o backing vocal! Oportunidade imperdível!!!",
         "area": "Dança, Teatro",
-        "loc": "João Pessoa, PB",
+        "loc": "Rua Abdias Gomes de Almeida, 800, Tambauzinho,João Pessoa, Paraíba",
         "type": "Dupla",
         "author_id": 6,
         "image_url": "./assets/img/header.avif"
@@ -55,7 +92,7 @@
         "title": "Procura por equipe para peça infantil.",
         "descricao": "Desejo proporcionar um momento de lazer para as crianças durante o mês de Outubro, então procuro profissionais para uma exibição teatral nos sábados.",
         "area": "Teatro",
-        "loc": "Recife, PE",
+        "loc": "Rua Álvaro Macedo, 54, Poço da Panela, Recife, Pernambuco",
         "type": "Participação especial",
         "author_id": 3,
         "image_url": "https://img.freepik.com/fotos-gratis/beleza-abstrata-de-outono-em-padrao-multicolorido-de-veios-de-folhas-gerado-por-ia_188544-9871.jpg?size=626&ext=jpg&ga=GA1.1.1819120589.1726185600&semt=ais_hybrid"
@@ -64,7 +101,7 @@
         "title": "Parceiro para iniciar na carreira musical",
         "descricao": "Sou apaixonada por música e desejo ingressar nesse ramo, estou em busca de uma dupla que compartilhe da mesma paixão.",
         "area": "Música",
-        "loc": "João Pessoa, PB",
+        "loc": "Rua Abdias Gomes de Almeida, 800, Tambauzinho,João Pessoa, Paraíba",
         "type": "Dupla",
         "author_id": 5
       },
@@ -72,7 +109,7 @@
         "title": "Releitura de obras",
         "descricao": "Estou a procura de uma pessoa para participar do meu projeto de releitura de 20 obras famosas, para exposição no final de novembro.",
         "area": "Pintura",
-        "loc": "Macapá, AP",
+        "loc": "Rua Jovino Dinoá, 4311, Beirol, Macapá, Amapá",
         "type": "Dupla",
         "author_id": 1
       },
@@ -80,7 +117,7 @@
         "title": "Teste",
         "descricao": "Teste",
         "area": "Performance, Dança",
-        "loc": "Fortaleza, CE",
+        "loc": "Rua Barão de Aracati, 2898, Joaquim Távora, Fortaleza, Ceará",
         "type": "Participação especial",
         "author_id": 3
       },
@@ -88,7 +125,7 @@
         "title": "Teste",
         "descricao": "Teste",
         "area": "Performance",
-        "loc": "Natal, RN",
+        "loc": "Rua Jundiaí, 641, Tirol, Natal, Rio Grande do Norte",
         "type": "Participação especial",
         "author_id": 6
       },
@@ -96,7 +133,7 @@
         "title": "Homenagem para Michael Jackson",
         "descricao": "Vou homenagear meu artista favorito e estou procurando uma pessoa com habiliades de canto, para no dia 25 de junho fazer uma participação no meu show com as músicas de Micheal Jackson.",
         "area": "Canto",
-        "loc": "Salvador, BA",
+        "loc": "Rua do timbó, 368, Caminho das Árvores, Salvador, Bahia",
         "type": "Participação especial",
         "author_id": 6
       },
@@ -104,7 +141,7 @@
         "title": "Teste",
         "descricao": "Teste",
         "area": "Canto, Dança",
-        "loc": "Natal, RN",
+        "loc": "Rua Jundiaí, 641, Tirol, Natal, Rio Grande do Norte",
         "type": "Participação especial",
         "author_id": 1
       }

@@ -79,11 +79,12 @@
                         <button>${project.author.email}</button>
                         <button>📍 ${project.loc}</button>
                     </div>
+
                     <hr class="divider">
                     <div class="collaboration-feedback">
                         <h4>Colaboração encerrada?</h4>
                         <div class="feedback-buttons">
-                            <button class="feedback-button" id="delete-project">Sim</button>
+                            <button class="feedback-button">Sim</button>
                             <button class="feedback-button">Não</button>
                         </div>
                         <div class="rating">
@@ -102,29 +103,6 @@
                         </div>
                     </div>
                 `;
-
-                // Adicionar evento de clique para deletar o projeto
-                document.getElementById('delete-project').addEventListener('click', async () => {
-                    const confirmDelete = confirm('Tem certeza de que deseja deletar este projeto?');
-                    if (confirmDelete) {
-                        try {
-                            const deleteResponse = await fetch(`/post/${projectId}`, {
-                                method: 'DELETE'
-                            });
-
-                            if (deleteResponse.ok) {
-                                alert('Projeto deletado com sucesso!');
-                                window.location.href = '/index.html'; // Redirecionar para a página principal
-                            } else {
-                                throw new Error('Erro ao deletar o projeto');
-                            }
-                        } catch (error) {
-                            console.error('Erro ao deletar o projeto:', error);
-                            alert('Erro ao deletar o projeto.');
-                        }
-                    }
-                });
-
             } catch (error) {
                 console.error('Erro ao carregar o projeto:', error);
                 document.getElementById('pagina').innerHTML = '<p>Projeto não encontrado.</p>';

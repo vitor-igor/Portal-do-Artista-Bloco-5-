@@ -4,8 +4,8 @@ Esta aplicação se refere a implementação do projeto "Portal do Artista", com
   -- Espaço para anúncio de projetos colaborativos; \
   -- Ferramentas para conectar artistas e profissionais do setor cultural; \
   -- Fóruns de discussão e troca de experiências. \
-\
+  \
 Conta com funcionalidades como: \
-  -- Anúncio de projetos colaborativos; \
-  -- busca de colaboradores por área de interesse; \
-  -- e localização.
+-- Anúncio de projetos colaborativos; \
+-- busca de colaboradores por área de interesse; \
+-- e localização.

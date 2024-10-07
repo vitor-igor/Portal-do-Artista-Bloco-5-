@@ -37,7 +37,7 @@ body {
 .seila {
     width: 99.3%;
     height: 90%;
-    margin: 10px 5px;
+    margin: 70px 5px;
     justify-content: center;
     align-items: center;
 }
@@ -245,4 +245,61 @@ body {
 .use {
     display: flex;
     padding: 7px;
+}
+
+
+
+/* Estilização da barra de pesquisa e do filtro */
+.search-container {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    justify-content: center;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    border-radius: 8px;
+}
+
+#searchBar {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 90%; /* Ajuste o tamanho conforme necessário */
+}
+
+#filterCategory {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+/* Overlay para exibir apenas a barra de pesquisa e filtro */
+#overlay {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding-bottom: 70vh;
+}
+
+/* Container para a lista de usuários no fundo */
+.users {
+    width: 29%;
+    border: 2px solid black;
+    float: left;
+    margin: 5px;
+    max-height: 60vh;
+    height: 60vh;
+    overflow-y: auto;
 }

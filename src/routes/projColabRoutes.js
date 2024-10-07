@@ -2,12 +2,10 @@ import express from 'express'
 import { PrismaClient } from '@prisma/client'
 
 const router = express.Router()
-const prisma = new PrismaClient();
+const prisma = new PrismaClient()
 
-export default function projColabRoutes(app, upload) {
-  
   // Rota para criar um projeto colaborativo com imagem e buscar o autor via e-mail
-  app.post('/create-proj-colab', upload.single('photo'), async (req, res) => {
+  router.post('/create-proj-colab', async (req, res) => {
     try {
       const { titulo, email, descricao, localizacao, area, colaboracao } = req.body;
       const imageUrl = req.file ? `/assets/img/uploads/${req.file.filename}` : null; // Caminho da imagem
@@ -51,7 +49,7 @@ export default function projColabRoutes(app, upload) {
   });
 
   // Rota para buscar um projeto colaborativo pelo ID
-  app.get('/post/:id', async (req, res) => {
+  router.get('/post/:id', async (req, res) => {
     try {
       const projectId = parseInt(req.params.id);
 
@@ -76,8 +74,8 @@ export default function projColabRoutes(app, upload) {
     }
   });
 
-  // Rota para deletar um projeto colaborativo pelo ID
-  app.delete('/post/:id', async (req, res) => {
+  // Nova rota DELETE para deletar um projeto colaborativo pelo ID
+  router.delete('/post/:id', async (req, res) => {
     try {
       const projectId = parseInt(req.params.id);
 
@@ -101,4 +99,29 @@ export default function projColabRoutes(app, upload) {
       res.status(500).json({ error: 'Erro ao deletar projeto colaborativo.' });
     }
   });
-}
+
+  // Rota para buscar todos os projetos colaborativos
+  router.get('/api/projColab', async (req, res) => {
+    try {
+        const projects = await prisma.projColab.findMany();
+        res.json(projects);
+    } catch (error) {
+        console.error("Erro ao buscar dados do banco de dados:", error);
+        res.status(500).json({ error: "Erro ao buscar dados do banco de dados" });
+    }
+  });
+
+// Rota para obter projetos geocodificados
+router.get('/api/projects', async (req, res) => {
+  try {
+      const projects = await prisma.projColab.findMany({
+          
+      });
+      res.json(projects);
+  } catch (error) {
+      console.error("Erro ao buscar projetos:", error);
+      res.status(500).json({ error: 'Erro ao buscar projetos' });
+  }
+});
+
+export default router
